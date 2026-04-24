@@ -1165,6 +1165,75 @@ Status DBImpl::Get(const ReadOptions& options, const Slice& key,
   return s;
 }
 
+
+
+// MY CODE-----------------------------------------------------------------------------------------------
+Status DBImpl::Scan(const ReadOptions& options,
+                    const Slice& start_key,
+                    const Slice& end_key,
+                    std::vector<std::pair<std::string, std::string>>* result) {
+  
+  // I binded the raw pointer to a local refrence so that it becomes convinent to interact with it like a vector
+  auto& result_vector = *result;
+
+  // Cleared the vector
+  result_vector.clear();
+
+
+  // there were two ways of doing this, as the other one involved manually writing delete iter at the end, i thought this version was cleaner to write
+  // When the  Scan function finishes and hits the closing bracket }, the local variable iter goes "out of scope" and is destroyed	
+  // this->NewIterator(options) is a function call to the LevelDB database, inside the  source code, 
+  // this function uses the NEW keyword to create an Iterator object on the heap(dynamic), 
+  // and then returns a raw pointer (Iterator*) that points to that newly created object
+  	// <Iterator> This tells the compiler which specific type of object the smart pointer is going to be pointing to
+  		// std::unique_ptr this is a template class from the C++ Standard Library <memory>
+  		//A unique_ptr is a wrapper around a raw pointer that provides exclusive ownership of the object it points to
+  		// Exclusive ownership means that only one smart pointer is allowed to manage a specific piece of memory at any given time
+			  // iter() is the variable name along with its constructor
+			  // Here, i am constructing the unique_ptr and handing it the raw pointer  which the NewIterator generated
+  std::unique_ptr<Iterator> iter(this->NewIterator(options));
+
+  // this evaluates if  the current_key < end_key
+  auto is_within_bounds = [&](const Slice& current_key) {
+      
+    // A: Extract the comparator to keep the next line clean
+    const Comparator* user_cmp = internal_comparator_.user_comparator();
+
+    //B: Compare the keys (-1 if less, 0 if equal, 1 if greater)
+    int cmp_result = user_cmp->Compare(current_key, end_key);
+
+    // C: Return true if its strictly less than the end_key
+    return cmp_result < 0;
+  };
+
+  //  Initialized the iterator to the starting position
+  iter->Seek(start_key);
+
+  // I wrote the traversal steps inside a while loop  
+  while (iter->Valid()) {
+    
+    // Extracts the current key to check it
+    Slice current_key = iter->key();
+
+    // Checking boundary condition inside the loop body
+    if (!is_within_bounds(current_key)) {break;} //Stop the scan immediately if reached end_key
+
+    // Extracts the value and add the pair to the result vector
+    Slice current_value = iter->value();
+    result_vector.emplace_back(current_key.ToString(), current_value.ToString());
+
+    // Advance the iterator to the next entry
+    iter->Next();
+  }
+
+  // Now we have the answer, so here, I returned the final state of the iterator
+  return iter->status();
+}
+// MY CODE-----------------------------------------------------------------------------------------------
+
+
+
+
 Iterator* DBImpl::NewIterator(const ReadOptions& options) {
   SequenceNumber latest_snapshot;
   uint32_t seed;

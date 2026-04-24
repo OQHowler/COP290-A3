@@ -12,11 +12,12 @@
 #include "leveldb/iterator.h"
 #include "leveldb/options.h"
 
-//
+// MY CODE-----------------------------------------------------------------------------------------------
 #include <vector>
 #include <utility>
 #include <string>
-//
+#include <memory>
+// MY CODE-----------------------------------------------------------------------------------------------
 
 namespace leveldb {
 
@@ -65,6 +66,19 @@ class LEVELDB_EXPORT DB {
   DB& operator=(const DB&) = delete;
 
   virtual ~DB();
+
+// MY CODE-----------------------------------------------------------------------------------------------
+// Return all key-value pairs whose keys fall within the half-open interval [start_key, end_key).
+// EXPLANATION OF CODE
+// This is written as virtual to make it a abstract class, any subclass must implement scan, using runtime polymorphism
+// Status is a return type which could return OK, NOTFOUND, etc
+// options is a object or type ReadOptions which is passed by refrence, and can not be modified inside function(due to const)and signifies how the read happenes
+// slice is a object that has info of a pointer but also contains info about length of the pointed object
+virtual Status Scan(const ReadOptions& options,
+                    const Slice& start_key,
+                    const Slice& end_key,
+                    std::vector<std::pair<std::string, std::string>>* result) = 0;
+// MY CODE-----------------------------------------------------------------------------------------------
 
   // Set the database entry for "key" to "value".  Returns OK on success,
   // and a non-OK status on error.

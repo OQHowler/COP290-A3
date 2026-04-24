@@ -35,6 +35,13 @@ class DBImpl : public DB {
 
   ~DBImpl() override;
 
+  // MY CODE-----------------------------------------------------------------------------------------------
+  // I have used the keyword override to say that this function overrides a virtual function in base class
+  Status Scan(const ReadOptions& options,
+                    const Slice& start_key,
+                    const Slice& end_key,
+                    std::vector<std::pair<std::string, std::string>>* result) override;
+  // MY CODE-----------------------------------------------------------------------------------------------
   // Implementations of the DB interface
   Status Put(const WriteOptions&, const Slice& key,
              const Slice& value) override;
