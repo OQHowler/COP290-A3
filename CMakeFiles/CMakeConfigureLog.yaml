@@ -1,0 +1,1885 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      The system is: Linux - 6.6.87.2-microsoft-standard-WSL2 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/shoubhit/COP290A3/leveldb/CMakeFiles/3.28.3/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/c++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/shoubhit/COP290A3/leveldb/CMakeFiles/3.28.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-xCSI2F"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-xCSI2F"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-xCSI2F'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3a704/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3a704.dir/build.make CMakeFiles/cmTC_3a704.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-xCSI2F'
+        Building C object CMakeFiles/cmTC_3a704.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_3a704.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04.1' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3a704.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_3a704.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_3a704.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccBQv5fg.s
+        GNU C17 (Ubuntu 13.3.0-6ubuntu2~24.04.1) version 13.3.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/x86_64-linux-gnu/13/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        Compiler executable checksum: b220a7f1a1f69970d969d254ad9ec166
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3a704.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_3a704.dir/'
+         as -v --64 -o CMakeFiles/cmTC_3a704.dir/CMakeCCompilerABI.c.o /tmp/ccBQv5fg.s
+        GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3a704.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_3a704.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_3a704
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3a704.dir/link.txt --verbose=1
+        /usr/bin/cc  -v CMakeFiles/cmTC_3a704.dir/CMakeCCompilerABI.c.o -o cmTC_3a704 
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04.1' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3a704' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_3a704.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccHWYB47.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_3a704 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_3a704.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3a704' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_3a704.'
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-xCSI2F'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/13/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/gcc/x86_64-linux-gnu/13/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-xCSI2F']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3a704/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_3a704.dir/build.make CMakeFiles/cmTC_3a704.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-xCSI2F']
+        ignore line: [Building C object CMakeFiles/cmTC_3a704.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_3a704.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04.1' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3a704.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_3a704.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_3a704.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccBQv5fg.s]
+        ignore line: [GNU C17 (Ubuntu 13.3.0-6ubuntu2~24.04.1) version 13.3.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/13/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: b220a7f1a1f69970d969d254ad9ec166]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3a704.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_3a704.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_3a704.dir/CMakeCCompilerABI.c.o /tmp/ccBQv5fg.s]
+        ignore line: [GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3a704.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_3a704.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_3a704]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3a704.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/cc  -v CMakeFiles/cmTC_3a704.dir/CMakeCCompilerABI.c.o -o cmTC_3a704 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04.1' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3a704' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_3a704.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccHWYB47.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_3a704 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_3a704.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccHWYB47.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_3a704] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..]
+          arg [CMakeFiles/cmTC_3a704.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13] ==> [/usr/lib/gcc/x86_64-linux-gnu/13]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/13;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-1Vqp6g"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-1Vqp6g"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-1Vqp6g'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5f68f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_5f68f.dir/build.make CMakeFiles/cmTC_5f68f.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-1Vqp6g'
+        Building CXX object CMakeFiles/cmTC_5f68f.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_5f68f.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04.1' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5f68f.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5f68f.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_5f68f.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccPL0Byo.s
+        GNU C++17 (Ubuntu 13.3.0-6ubuntu2~24.04.1) version 13.3.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/13"
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/include/c++/13
+         /usr/include/x86_64-linux-gnu/c++/13
+         /usr/include/c++/13/backward
+         /usr/lib/gcc/x86_64-linux-gnu/13/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        Compiler executable checksum: 7896445e4990772fdae9dc0659a99266
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5f68f.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5f68f.dir/'
+         as -v --64 -o CMakeFiles/cmTC_5f68f.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccPL0Byo.s
+        GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5f68f.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5f68f.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_5f68f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5f68f.dir/link.txt --verbose=1
+        /usr/bin/c++  -v CMakeFiles/cmTC_5f68f.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_5f68f 
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04.1' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5f68f' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_5f68f.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccGXBw12.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5f68f /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_5f68f.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5f68f' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_5f68f.'
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-1Vqp6g'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/include/c++/13]
+          add: [/usr/include/x86_64-linux-gnu/c++/13]
+          add: [/usr/include/c++/13/backward]
+          add: [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/include/c++/13] ==> [/usr/include/c++/13]
+        collapse include dir [/usr/include/x86_64-linux-gnu/c++/13] ==> [/usr/include/x86_64-linux-gnu/c++/13]
+        collapse include dir [/usr/include/c++/13/backward] ==> [/usr/include/c++/13/backward]
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/13/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/include/c++/13;/usr/include/x86_64-linux-gnu/c++/13;/usr/include/c++/13/backward;/usr/lib/gcc/x86_64-linux-gnu/13/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-1Vqp6g']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5f68f/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_5f68f.dir/build.make CMakeFiles/cmTC_5f68f.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-1Vqp6g']
+        ignore line: [Building CXX object CMakeFiles/cmTC_5f68f.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_5f68f.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04.1' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5f68f.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5f68f.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_5f68f.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccPL0Byo.s]
+        ignore line: [GNU C++17 (Ubuntu 13.3.0-6ubuntu2~24.04.1) version 13.3.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/13"]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/include/c++/13]
+        ignore line: [ /usr/include/x86_64-linux-gnu/c++/13]
+        ignore line: [ /usr/include/c++/13/backward]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/13/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 7896445e4990772fdae9dc0659a99266]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5f68f.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5f68f.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_5f68f.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccPL0Byo.s]
+        ignore line: [GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5f68f.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_5f68f.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_5f68f]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5f68f.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/c++  -v CMakeFiles/cmTC_5f68f.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_5f68f ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04.1' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-EldibY/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5f68f' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_5f68f.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccGXBw12.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5f68f /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_5f68f.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccGXBw12.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_5f68f] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..]
+          arg [CMakeFiles/cmTC_5f68f.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13] ==> [/usr/lib/gcc/x86_64-linux-gnu/13]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> [/usr/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/13;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:38 (check_include_file)"
+    checks:
+      - "Looking for unistd.h"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-nXQHxw"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-nXQHxw"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_UNISTD_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-nXQHxw'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_60f26/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_60f26.dir/build.make CMakeFiles/cmTC_60f26.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-nXQHxw'
+        Building C object CMakeFiles/cmTC_60f26.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_60f26.dir/CheckIncludeFile.c.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-nXQHxw/CheckIncludeFile.c
+        Linking C executable cmTC_60f26
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60f26.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_60f26.dir/CheckIncludeFile.c.o -o cmTC_60f26 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-nXQHxw'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "CMakeLists.txt:41 (check_library_exists)"
+    checks:
+      - "Looking for crc32c_value in crc32c"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-7ecvAP"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-7ecvAP"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_CRC32C"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-7ecvAP'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ed7b8/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ed7b8.dir/build.make CMakeFiles/cmTC_ed7b8.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-7ecvAP'
+        Building C object CMakeFiles/cmTC_ed7b8.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=crc32c_value -std=c11 -o CMakeFiles/cmTC_ed7b8.dir/CheckFunctionExists.c.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-7ecvAP/CheckFunctionExists.c
+        Linking C executable cmTC_ed7b8
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed7b8.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=crc32c_value CMakeFiles/cmTC_ed7b8.dir/CheckFunctionExists.c.o -o cmTC_ed7b8  -lcrc32c 
+        /usr/bin/ld: cannot find -lcrc32c: No such file or directory
+        collect2: error: ld returned 1 exit status
+        gmake[1]: *** [CMakeFiles/cmTC_ed7b8.dir/build.make:99: cmTC_ed7b8] Error 1
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-7ecvAP'
+        gmake: *** [Makefile:127: cmTC_ed7b8/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "CMakeLists.txt:42 (check_library_exists)"
+    checks:
+      - "Looking for snappy_compress in snappy"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-UqRKdV"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-UqRKdV"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_SNAPPY"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-UqRKdV'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7daf4/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_7daf4.dir/build.make CMakeFiles/cmTC_7daf4.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-UqRKdV'
+        Building C object CMakeFiles/cmTC_7daf4.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=snappy_compress -std=c11 -o CMakeFiles/cmTC_7daf4.dir/CheckFunctionExists.c.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-UqRKdV/CheckFunctionExists.c
+        Linking C executable cmTC_7daf4
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7daf4.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=snappy_compress CMakeFiles/cmTC_7daf4.dir/CheckFunctionExists.c.o -o cmTC_7daf4  -lsnappy 
+        /usr/bin/ld: cannot find -lsnappy: No such file or directory
+        collect2: error: ld returned 1 exit status
+        gmake[1]: *** [CMakeFiles/cmTC_7daf4.dir/build.make:99: cmTC_7daf4] Error 1
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-UqRKdV'
+        gmake: *** [Makefile:127: cmTC_7daf4/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "CMakeLists.txt:43 (check_library_exists)"
+    checks:
+      - "Looking for zstd_compress in zstd"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-Os55x6"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-Os55x6"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_ZSTD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-Os55x6'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_773d9/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_773d9.dir/build.make CMakeFiles/cmTC_773d9.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-Os55x6'
+        Building C object CMakeFiles/cmTC_773d9.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=zstd_compress -std=c11 -o CMakeFiles/cmTC_773d9.dir/CheckFunctionExists.c.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-Os55x6/CheckFunctionExists.c
+        Linking C executable cmTC_773d9
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_773d9.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=zstd_compress CMakeFiles/cmTC_773d9.dir/CheckFunctionExists.c.o -o cmTC_773d9  -lzstd 
+        /usr/bin/ld: cannot find -lzstd: No such file or directory
+        collect2: error: ld returned 1 exit status
+        gmake[1]: *** [CMakeFiles/cmTC_773d9.dir/build.make:99: cmTC_773d9] Error 1
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-Os55x6'
+        gmake: *** [Makefile:127: cmTC_773d9/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "CMakeLists.txt:44 (check_library_exists)"
+    checks:
+      - "Looking for malloc in tcmalloc"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-9ugBAs"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-9ugBAs"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_TCMALLOC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-9ugBAs'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_66175/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_66175.dir/build.make CMakeFiles/cmTC_66175.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-9ugBAs'
+        Building C object CMakeFiles/cmTC_66175.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=malloc -std=c11 -o CMakeFiles/cmTC_66175.dir/CheckFunctionExists.c.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-9ugBAs/CheckFunctionExists.c
+        <command-line>: warning: conflicting types for built-in function ‘malloc’; expected ‘void *(long unsigned int)’ [-Wbuiltin-declaration-mismatch]
+        /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-9ugBAs/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+            7 |   CHECK_FUNCTION_EXISTS(void);
+              |   ^~~~~~~~~~~~~~~~~~~~~
+        /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-9ugBAs/CheckFunctionExists.c:1:1: note: ‘malloc’ is declared in header ‘<stdlib.h>’
+          +++ |+#include <stdlib.h>
+            1 | #ifdef CHECK_FUNCTION_EXISTS
+        Linking C executable cmTC_66175
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66175.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=malloc CMakeFiles/cmTC_66175.dir/CheckFunctionExists.c.o -o cmTC_66175  -ltcmalloc 
+        /usr/bin/ld: cannot find -ltcmalloc: No such file or directory
+        collect2: error: ld returned 1 exit status
+        gmake[1]: *** [CMakeFiles/cmTC_66175.dir/build.make:99: cmTC_66175] Error 1
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-9ugBAs'
+        gmake: *** [Makefile:127: cmTC_66175/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSymbolExists.cmake:72 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:52 (check_cxx_symbol_exists)"
+    checks:
+      - "Looking for fdatasync"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-qP2dUT"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-qP2dUT"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_FDATASYNC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-qP2dUT'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_236b9/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_236b9.dir/build.make CMakeFiles/cmTC_236b9.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-qP2dUT'
+        Building CXX object CMakeFiles/cmTC_236b9.dir/CheckSymbolExists.cxx.o
+        /usr/bin/c++    -o CMakeFiles/cmTC_236b9.dir/CheckSymbolExists.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-qP2dUT/CheckSymbolExists.cxx
+        Linking CXX executable cmTC_236b9
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_236b9.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_236b9.dir/CheckSymbolExists.cxx.o -o cmTC_236b9 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-qP2dUT'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSymbolExists.cmake:72 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:53 (check_cxx_symbol_exists)"
+    checks:
+      - "Looking for F_FULLFSYNC"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-x4Fuzp"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-x4Fuzp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_FULLFSYNC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-x4Fuzp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e7021/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e7021.dir/build.make CMakeFiles/cmTC_e7021.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-x4Fuzp'
+        Building CXX object CMakeFiles/cmTC_e7021.dir/CheckSymbolExists.cxx.o
+        /usr/bin/c++    -o CMakeFiles/cmTC_e7021.dir/CheckSymbolExists.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-x4Fuzp/CheckSymbolExists.cxx
+        /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-x4Fuzp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+        /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-x4Fuzp/CheckSymbolExists.cxx:8:19: error: ‘F_FULLFSYNC’ was not declared in this scope
+            8 |   return ((int*)(&F_FULLFSYNC))[argc];
+              |                   ^~~~~~~~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_e7021.dir/build.make:78: CMakeFiles/cmTC_e7021.dir/CheckSymbolExists.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-x4Fuzp'
+        gmake: *** [Makefile:127: cmTC_e7021/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSymbolExists.cmake:72 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:54 (check_cxx_symbol_exists)"
+    checks:
+      - "Looking for O_CLOEXEC"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-GgJ660"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-GgJ660"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_O_CLOEXEC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-GgJ660'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3761c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3761c.dir/build.make CMakeFiles/cmTC_3761c.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-GgJ660'
+        Building CXX object CMakeFiles/cmTC_3761c.dir/CheckSymbolExists.cxx.o
+        /usr/bin/c++    -o CMakeFiles/cmTC_3761c.dir/CheckSymbolExists.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-GgJ660/CheckSymbolExists.cxx
+        Linking CXX executable cmTC_3761c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3761c.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_3761c.dir/CheckSymbolExists.cxx.o -o cmTC_3761c 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-GgJ660'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:83 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_CLANG_THREAD_SAFETY"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-54AncP"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-54AncP"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_CLANG_THREAD_SAFETY"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-54AncP'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_87796/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_87796.dir/build.make CMakeFiles/cmTC_87796.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-54AncP'
+        Building CXX object CMakeFiles/cmTC_87796.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CLANG_THREAD_SAFETY  -fno-exceptions -fno-rtti    -Wthread-safety -o CMakeFiles/cmTC_87796.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-54AncP/src.cxx
+        c++: error: unrecognized command-line option '-Wthread-safety'
+        gmake[1]: *** [CMakeFiles/cmTC_87796.dir/build.make:78: CMakeFiles/cmTC_87796.dir/src.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-54AncP'
+        gmake: *** [Makefile:127: cmTC_87796/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:86 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test LEVELDB_HAVE_NO_MISSING_FIELD_INITIALIZERS"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-VqjZe6"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-VqjZe6"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "LEVELDB_HAVE_NO_MISSING_FIELD_INITIALIZERS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-VqjZe6'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b8fa5/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b8fa5.dir/build.make CMakeFiles/cmTC_b8fa5.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-VqjZe6'
+        Building CXX object CMakeFiles/cmTC_b8fa5.dir/src.cxx.o
+        /usr/bin/c++ -DLEVELDB_HAVE_NO_MISSING_FIELD_INITIALIZERS  -fno-exceptions -fno-rtti    -Wno-missing-field-initializers -o CMakeFiles/cmTC_b8fa5.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-VqjZe6/src.cxx
+        Linking CXX executable cmTC_b8fa5
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b8fa5.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  CMakeFiles/cmTC_b8fa5.dir/src.cxx.o -o cmTC_b8fa5 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-VqjZe6'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:92 (check_cxx_source_compiles)"
+    checks:
+      - "Performing Test HAVE_CXX17_HAS_INCLUDE"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-g8C7BQ"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-g8C7BQ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_CXX17_HAS_INCLUDE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-g8C7BQ'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8c15f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_8c15f.dir/build.make CMakeFiles/cmTC_8c15f.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-g8C7BQ'
+        Building CXX object CMakeFiles/cmTC_8c15f.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX17_HAS_INCLUDE  -fno-exceptions -fno-rtti  -o CMakeFiles/cmTC_8c15f.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-g8C7BQ/src.cxx
+        Linking CXX executable cmTC_8c15f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c15f.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  CMakeFiles/cmTC_8c15f.dir/src.cxx.o -o cmTC_8c15f 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-g8C7BQ'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "CMakeLists.txt:285 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-WK3Xmg"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-WK3Xmg"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wstrict-prototypes"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-WK3Xmg'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2ff48/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_2ff48.dir/build.make CMakeFiles/cmTC_2ff48.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-WK3Xmg'
+        Building C object CMakeFiles/cmTC_2ff48.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -Wstrict-prototypes  -std=c11 -o CMakeFiles/cmTC_2ff48.dir/src.c.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-WK3Xmg/src.c
+        Linking C executable cmTC_2ff48
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ff48.dir/link.txt --verbose=1
+        /usr/bin/cc  -Wstrict-prototypes  CMakeFiles/cmTC_2ff48.dir/src.c.o -o cmTC_2ff48 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-WK3Xmg'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "third_party/benchmark/CMakeLists.txt:140 (check_library_exists)"
+    checks:
+      - "Looking for shm_open in rt"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-ywZ9xM"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-ywZ9xM"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wstrict-prototypes"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "HAVE_LIB_RT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-ywZ9xM'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_54b68/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_54b68.dir/build.make CMakeFiles/cmTC_54b68.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-ywZ9xM'
+        Building C object CMakeFiles/cmTC_54b68.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -Wstrict-prototypes -DCHECK_FUNCTION_EXISTS=shm_open -std=c11 -o CMakeFiles/cmTC_54b68.dir/CheckFunctionExists.c.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-ywZ9xM/CheckFunctionExists.c
+        Linking C executable cmTC_54b68
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54b68.dir/link.txt --verbose=1
+        /usr/bin/cc  -Wstrict-prototypes -DCHECK_FUNCTION_EXISTS=shm_open CMakeFiles/cmTC_54b68.dir/CheckFunctionExists.c.o -o cmTC_54b68  -lrt 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-ywZ9xM'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "third_party/benchmark/cmake/AddCXXCompilerFlag.cmake:34 (check_cxx_compiler_flag)"
+      - "third_party/benchmark/CMakeLists.txt:199 (add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WALL"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-JlFK6W"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-JlFK6W"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WALL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-JlFK6W'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e4f92/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e4f92.dir/build.make CMakeFiles/cmTC_e4f92.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-JlFK6W'
+        Building CXX object CMakeFiles/cmTC_e4f92.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WALL  -fno-exceptions -fno-rtti  -Wall -std=c++17   -Wall -o CMakeFiles/cmTC_e4f92.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-JlFK6W/src.cxx
+        Linking CXX executable cmTC_e4f92
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e4f92.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall CMakeFiles/cmTC_e4f92.dir/src.cxx.o -o cmTC_e4f92 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-JlFK6W'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "third_party/benchmark/cmake/AddCXXCompilerFlag.cmake:34 (check_cxx_compiler_flag)"
+      - "third_party/benchmark/CMakeLists.txt:200 (add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WEXTRA"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-OhMJgG"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-OhMJgG"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WEXTRA"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-OhMJgG'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_82a07/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_82a07.dir/build.make CMakeFiles/cmTC_82a07.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-OhMJgG'
+        Building CXX object CMakeFiles/cmTC_82a07.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WEXTRA  -fno-exceptions -fno-rtti  -Wall  -Wextra -std=c++17   -Wextra -o CMakeFiles/cmTC_82a07.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-OhMJgG/src.cxx
+        Linking CXX executable cmTC_82a07
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_82a07.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall  -Wextra CMakeFiles/cmTC_82a07.dir/src.cxx.o -o cmTC_82a07 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-OhMJgG'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "third_party/benchmark/cmake/AddCXXCompilerFlag.cmake:34 (check_cxx_compiler_flag)"
+      - "third_party/benchmark/CMakeLists.txt:201 (add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WSHADOW"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-oac0rS"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-oac0rS"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WSHADOW"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-oac0rS'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6b459/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6b459.dir/build.make CMakeFiles/cmTC_6b459.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-oac0rS'
+        Building CXX object CMakeFiles/cmTC_6b459.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WSHADOW  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow -std=c++17   -Wshadow -o CMakeFiles/cmTC_6b459.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-oac0rS/src.cxx
+        Linking CXX executable cmTC_6b459
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6b459.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow CMakeFiles/cmTC_6b459.dir/src.cxx.o -o cmTC_6b459 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-oac0rS'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "third_party/benchmark/cmake/AddCXXCompilerFlag.cmake:34 (check_cxx_compiler_flag)"
+      - "third_party/benchmark/CMakeLists.txt:202 (add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WFLOAT_EQUAL"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-IhH824"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-IhH824"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WFLOAT_EQUAL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-IhH824'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7ca4c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_7ca4c.dir/build.make CMakeFiles/cmTC_7ca4c.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-IhH824'
+        Building CXX object CMakeFiles/cmTC_7ca4c.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WFLOAT_EQUAL  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal -std=c++17   -Wfloat-equal -o CMakeFiles/cmTC_7ca4c.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-IhH824/src.cxx
+        Linking CXX executable cmTC_7ca4c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7ca4c.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal CMakeFiles/cmTC_7ca4c.dir/src.cxx.o -o cmTC_7ca4c 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-IhH824'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "third_party/benchmark/cmake/AddCXXCompilerFlag.cmake:34 (check_cxx_compiler_flag)"
+      - "third_party/benchmark/CMakeLists.txt:203 (add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WOLD_STYLE_CAST"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-HRwMRp"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-HRwMRp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WOLD_STYLE_CAST"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-HRwMRp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_99b01/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_99b01.dir/build.make CMakeFiles/cmTC_99b01.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-HRwMRp'
+        Building CXX object CMakeFiles/cmTC_99b01.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WOLD_STYLE_CAST  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast -std=c++17   -Wold-style-cast -o CMakeFiles/cmTC_99b01.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-HRwMRp/src.cxx
+        Linking CXX executable cmTC_99b01
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99b01.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast CMakeFiles/cmTC_99b01.dir/src.cxx.o -o cmTC_99b01 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-HRwMRp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "third_party/benchmark/cmake/AddCXXCompilerFlag.cmake:34 (check_cxx_compiler_flag)"
+      - "third_party/benchmark/CMakeLists.txt:204 (add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WCONVERSION"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-tU6fUT"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-tU6fUT"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WCONVERSION"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-tU6fUT'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_114de/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_114de.dir/build.make CMakeFiles/cmTC_114de.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-tU6fUT'
+        Building CXX object CMakeFiles/cmTC_114de.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WCONVERSION  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion -std=c++17   -Wconversion -o CMakeFiles/cmTC_114de.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-tU6fUT/src.cxx
+        Linking CXX executable cmTC_114de
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_114de.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion CMakeFiles/cmTC_114de.dir/src.cxx.o -o cmTC_114de 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-tU6fUT'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "third_party/benchmark/cmake/AddCXXCompilerFlag.cmake:34 (check_cxx_compiler_flag)"
+      - "third_party/benchmark/CMakeLists.txt:205 (add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WFORMAT_2"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-1cbowk"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-1cbowk"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WFORMAT_2"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-1cbowk'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_47a52/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_47a52.dir/build.make CMakeFiles/cmTC_47a52.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-1cbowk'
+        Building CXX object CMakeFiles/cmTC_47a52.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WFORMAT_2  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2 -std=c++17   -Wformat=2 -o CMakeFiles/cmTC_47a52.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-1cbowk/src.cxx
+        Linking CXX executable cmTC_47a52
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_47a52.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2 CMakeFiles/cmTC_47a52.dir/src.cxx.o -o cmTC_47a52 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-1cbowk'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "third_party/benchmark/cmake/AddCXXCompilerFlag.cmake:34 (check_cxx_compiler_flag)"
+      - "third_party/benchmark/CMakeLists.txt:207 (add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WERROR"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-yyUOBK"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-yyUOBK"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WERROR"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-yyUOBK'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1b207/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1b207.dir/build.make CMakeFiles/cmTC_1b207.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-yyUOBK'
+        Building CXX object CMakeFiles/cmTC_1b207.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WERROR  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror -std=c++17   -Werror -o CMakeFiles/cmTC_1b207.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-yyUOBK/src.cxx
+        Linking CXX executable cmTC_1b207
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b207.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror CMakeFiles/cmTC_1b207.dir/src.cxx.o -o cmTC_1b207 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-yyUOBK'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "third_party/benchmark/cmake/AddCXXCompilerFlag.cmake:34 (check_cxx_compiler_flag)"
+      - "third_party/benchmark/CMakeLists.txt:211 (add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WSUGGEST_OVERRIDE"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-FfsISc"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-FfsISc"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WSUGGEST_OVERRIDE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-FfsISc'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_12e87/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_12e87.dir/build.make CMakeFiles/cmTC_12e87.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-FfsISc'
+        Building CXX object CMakeFiles/cmTC_12e87.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WSUGGEST_OVERRIDE  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override -std=c++17   -Wsuggest-override -o CMakeFiles/cmTC_12e87.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-FfsISc/src.cxx
+        Linking CXX executable cmTC_12e87
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12e87.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override CMakeFiles/cmTC_12e87.dir/src.cxx.o -o cmTC_12e87 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-FfsISc'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "third_party/benchmark/cmake/AddCXXCompilerFlag.cmake:34 (check_cxx_compiler_flag)"
+      - "third_party/benchmark/CMakeLists.txt:213 (add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_PEDANTIC"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-B8IR9d"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-B8IR9d"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_PEDANTIC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-B8IR9d'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_15869/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_15869.dir/build.make CMakeFiles/cmTC_15869.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-B8IR9d'
+        Building CXX object CMakeFiles/cmTC_15869.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_PEDANTIC  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic -std=c++17   -pedantic -o CMakeFiles/cmTC_15869.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-B8IR9d/src.cxx
+        Linking CXX executable cmTC_15869
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_15869.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic CMakeFiles/cmTC_15869.dir/src.cxx.o -o cmTC_15869 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-B8IR9d'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "third_party/benchmark/cmake/AddCXXCompilerFlag.cmake:34 (check_cxx_compiler_flag)"
+      - "third_party/benchmark/CMakeLists.txt:214 (add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_PEDANTIC_ERRORS"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-q5ZGGm"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-q5ZGGm"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_PEDANTIC_ERRORS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-q5ZGGm'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e7b6a/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e7b6a.dir/build.make CMakeFiles/cmTC_e7b6a.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-q5ZGGm'
+        Building CXX object CMakeFiles/cmTC_e7b6a.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_PEDANTIC_ERRORS  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors -std=c++17   -pedantic-errors -o CMakeFiles/cmTC_e7b6a.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-q5ZGGm/src.cxx
+        Linking CXX executable cmTC_e7b6a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7b6a.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors CMakeFiles/cmTC_e7b6a.dir/src.cxx.o -o cmTC_e7b6a 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-q5ZGGm'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "third_party/benchmark/cmake/AddCXXCompilerFlag.cmake:34 (check_cxx_compiler_flag)"
+      - "third_party/benchmark/CMakeLists.txt:215 (add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-lKuS3G"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-lKuS3G"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WSHORTEN_64_TO_32"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-lKuS3G'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_20846/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_20846.dir/build.make CMakeFiles/cmTC_20846.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-lKuS3G'
+        Building CXX object CMakeFiles/cmTC_20846.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WSHORTEN_64_TO_32  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32 -std=c++17   -Wshorten-64-to-32 -o CMakeFiles/cmTC_20846.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-lKuS3G/src.cxx
+        c++: error: unrecognized command-line option '-Wshorten-64-to-32'
+        c++: error: unrecognized command-line option '-Wshorten-64-to-32'
+        gmake[1]: *** [CMakeFiles/cmTC_20846.dir/build.make:78: CMakeFiles/cmTC_20846.dir/src.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-lKuS3G'
+        gmake: *** [Makefile:127: cmTC_20846/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "third_party/benchmark/cmake/AddCXXCompilerFlag.cmake:34 (check_cxx_compiler_flag)"
+      - "third_party/benchmark/CMakeLists.txt:216 (add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_FSTRICT_ALIASING"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-XxKjWn"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-XxKjWn"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_FSTRICT_ALIASING"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-XxKjWn'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ca2ee/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ca2ee.dir/build.make CMakeFiles/cmTC_ca2ee.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-XxKjWn'
+        Building CXX object CMakeFiles/cmTC_ca2ee.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_FSTRICT_ALIASING  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing -std=c++17   -fstrict-aliasing -o CMakeFiles/cmTC_ca2ee.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-XxKjWn/src.cxx
+        Linking CXX executable cmTC_ca2ee
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca2ee.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing CMakeFiles/cmTC_ca2ee.dir/src.cxx.o -o cmTC_ca2ee 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-XxKjWn'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "third_party/benchmark/cmake/AddCXXCompilerFlag.cmake:34 (check_cxx_compiler_flag)"
+      - "third_party/benchmark/CMakeLists.txt:219 (add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-X9ThkN"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-X9ThkN"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-X9ThkN'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_21ef2/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_21ef2.dir/build.make CMakeFiles/cmTC_21ef2.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-X9ThkN'
+        Building CXX object CMakeFiles/cmTC_21ef2.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations -std=c++17   -Wno-deprecated-declarations -o CMakeFiles/cmTC_21ef2.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-X9ThkN/src.cxx
+        Linking CXX executable cmTC_21ef2
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21ef2.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations CMakeFiles/cmTC_21ef2.dir/src.cxx.o -o cmTC_21ef2 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-X9ThkN'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "third_party/benchmark/cmake/AddCXXCompilerFlag.cmake:34 (check_cxx_compiler_flag)"
+      - "third_party/benchmark/CMakeLists.txt:232 (add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-J69dFp"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-J69dFp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WNO_DEPRECATED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-J69dFp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e9dcf/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e9dcf.dir/build.make CMakeFiles/cmTC_e9dcf.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-J69dFp'
+        Building CXX object CMakeFiles/cmTC_e9dcf.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WNO_DEPRECATED  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated -std=c++17   -Wno-deprecated -o CMakeFiles/cmTC_e9dcf.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-J69dFp/src.cxx
+        Linking CXX executable cmTC_e9dcf
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e9dcf.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated CMakeFiles/cmTC_e9dcf.dir/src.cxx.o -o cmTC_e9dcf 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-J69dFp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "third_party/benchmark/cmake/AddCXXCompilerFlag.cmake:34 (check_cxx_compiler_flag)"
+      - "third_party/benchmark/CMakeLists.txt:235 (add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_FNO_EXCEPTIONS"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-FOsjmx"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-FOsjmx"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_FNO_EXCEPTIONS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-FOsjmx'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e6141/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e6141.dir/build.make CMakeFiles/cmTC_e6141.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-FOsjmx'
+        Building CXX object CMakeFiles/cmTC_e6141.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_FNO_EXCEPTIONS  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions -std=c++17   -fno-exceptions -o CMakeFiles/cmTC_e6141.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-FOsjmx/src.cxx
+        Linking CXX executable cmTC_e6141
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6141.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions CMakeFiles/cmTC_e6141.dir/src.cxx.o -o cmTC_e6141 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-FOsjmx'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "third_party/benchmark/cmake/AddCXXCompilerFlag.cmake:34 (check_cxx_compiler_flag)"
+      - "third_party/benchmark/CMakeLists.txt:240 (add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WSTRICT_ALIASING"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-mqq2Df"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-mqq2Df"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WSTRICT_ALIASING"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-mqq2Df'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_20c1a/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_20c1a.dir/build.make CMakeFiles/cmTC_20c1a.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-mqq2Df'
+        Building CXX object CMakeFiles/cmTC_20c1a.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WSTRICT_ALIASING  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing -std=c++17   -Wstrict-aliasing -o CMakeFiles/cmTC_20c1a.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-mqq2Df/src.cxx
+        Linking CXX executable cmTC_20c1a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20c1a.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing CMakeFiles/cmTC_20c1a.dir/src.cxx.o -o cmTC_20c1a 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-mqq2Df'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "third_party/benchmark/cmake/AddCXXCompilerFlag.cmake:34 (check_cxx_compiler_flag)"
+      - "third_party/benchmark/CMakeLists.txt:244 (add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_WTHREAD_SAFETY"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-KvCVML"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-KvCVML"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_WTHREAD_SAFETY"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-KvCVML'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a5d88/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a5d88.dir/build.make CMakeFiles/cmTC_a5d88.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-KvCVML'
+        Building CXX object CMakeFiles/cmTC_a5d88.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_WTHREAD_SAFETY  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -std=c++17   -Wthread-safety -o CMakeFiles/cmTC_a5d88.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-KvCVML/src.cxx
+        c++: error: unrecognized command-line option '-Wthread-safety'
+        c++: error: unrecognized command-line option '-Wthread-safety'
+        gmake[1]: *** [CMakeFiles/cmTC_a5d88.dir/build.make:78: CMakeFiles/cmTC_a5d88.dir/src.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-KvCVML'
+        gmake: *** [Makefile:127: cmTC_a5d88/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "third_party/benchmark/cmake/AddCXXCompilerFlag.cmake:34 (check_cxx_compiler_flag)"
+      - "third_party/benchmark/CMakeLists.txt:295 (add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_CXX_FLAG_COVERAGE"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-NLcVUZ"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-NLcVUZ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "HAVE_CXX_FLAG_COVERAGE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-NLcVUZ'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_48f31/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_48f31.dir/build.make CMakeFiles/cmTC_48f31.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-NLcVUZ'
+        Building CXX object CMakeFiles/cmTC_48f31.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_CXX_FLAG_COVERAGE  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing  --coverage -std=c++17   --coverage -o CMakeFiles/cmTC_48f31.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-NLcVUZ/src.cxx
+        Linking CXX executable cmTC_48f31
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_48f31.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing  --coverage CMakeFiles/cmTC_48f31.dir/src.cxx.o -o cmTC_48f31 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-NLcVUZ'
+        
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "third_party/benchmark/cmake/CXXFeatureCheck.cmake:58 (try_run)"
+      - "third_party/benchmark/CMakeLists.txt:319 (cxx_feature_check)"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "COMPILE_HAVE_STD_REGEX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f6a32/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f6a32.dir/build.make CMakeFiles/cmTC_f6a32.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_f6a32.dir/std_regex.cpp.o
+        /usr/bin/c++   -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing  -std=c++17 -o CMakeFiles/cmTC_f6a32.dir/std_regex.cpp.o -c /home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/std_regex.cpp
+        Linking CXX executable cmTC_f6a32
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f6a32.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing  CMakeFiles/cmTC_f6a32.dir/std_regex.cpp.o -o cmTC_f6a32 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "RUN_HAVE_STD_REGEX"
+      cached: true
+      stdout: |
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "third_party/benchmark/cmake/CXXFeatureCheck.cmake:58 (try_run)"
+      - "third_party/benchmark/CMakeLists.txt:320 (cxx_feature_check)"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "COMPILE_HAVE_GNU_POSIX_REGEX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bc61e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bc61e.dir/build.make CMakeFiles/cmTC_bc61e.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_bc61e.dir/gnu_posix_regex.cpp.o
+        /usr/bin/c++   -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing  -std=c++17 -o CMakeFiles/cmTC_bc61e.dir/gnu_posix_regex.cpp.o -c /home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/gnu_posix_regex.cpp
+        /home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/gnu_posix_regex.cpp:1:10: fatal error: gnuregex.h: No such file or directory
+            1 | #include <gnuregex.h>
+              |          ^~~~~~~~~~~~
+        compilation terminated.
+        gmake[1]: *** [CMakeFiles/cmTC_bc61e.dir/build.make:78: CMakeFiles/cmTC_bc61e.dir/gnu_posix_regex.cpp.o] Error 1
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp'
+        gmake: *** [Makefile:127: cmTC_bc61e/fast] Error 2
+        
+      exitCode: 2
+    runResult:
+      variable: "RUN_HAVE_GNU_POSIX_REGEX"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "third_party/benchmark/cmake/CXXFeatureCheck.cmake:58 (try_run)"
+      - "third_party/benchmark/CMakeLists.txt:321 (cxx_feature_check)"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "COMPILE_HAVE_POSIX_REGEX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fd35f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_fd35f.dir/build.make CMakeFiles/cmTC_fd35f.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_fd35f.dir/posix_regex.cpp.o
+        /usr/bin/c++   -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing  -std=c++17 -o CMakeFiles/cmTC_fd35f.dir/posix_regex.cpp.o -c /home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/posix_regex.cpp
+        Linking CXX executable cmTC_fd35f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fd35f.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing  CMakeFiles/cmTC_fd35f.dir/posix_regex.cpp.o -o cmTC_fd35f 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "RUN_HAVE_POSIX_REGEX"
+      cached: true
+      stdout: |
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "third_party/benchmark/cmake/CXXFeatureCheck.cmake:58 (try_run)"
+      - "third_party/benchmark/CMakeLists.txt:330 (cxx_feature_check)"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "COMPILE_HAVE_STEADY_CLOCK"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a978c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a978c.dir/build.make CMakeFiles/cmTC_a978c.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_a978c.dir/steady_clock.cpp.o
+        /usr/bin/c++   -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing  -std=c++17 -o CMakeFiles/cmTC_a978c.dir/steady_clock.cpp.o -c /home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/steady_clock.cpp
+        Linking CXX executable cmTC_a978c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a978c.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing  CMakeFiles/cmTC_a978c.dir/steady_clock.cpp.o -o cmTC_a978c 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "RUN_HAVE_STEADY_CLOCK"
+      cached: true
+      stdout: |
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "third_party/benchmark/cmake/CXXFeatureCheck.cmake:58 (try_run)"
+      - "third_party/benchmark/CMakeLists.txt:334 (cxx_feature_check)"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/Modules;/home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake"
+    buildResult:
+      variable: "COMPILE_HAVE_PTHREAD_AFFINITY"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_313f1/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_313f1.dir/build.make CMakeFiles/cmTC_313f1.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_313f1.dir/pthread_affinity.cpp.o
+        /usr/bin/c++   -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing  -std=c++17 -o CMakeFiles/cmTC_313f1.dir/pthread_affinity.cpp.o -c /home/shoubhit/COP290A3/leveldb/third_party/benchmark/cmake/pthread_affinity.cpp
+        Linking CXX executable cmTC_313f1
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_313f1.dir/link.txt --verbose=1
+        /usr/bin/c++  -fno-exceptions -fno-rtti  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wold-style-cast  -Wconversion  -Wformat=2  -Werror  -Wsuggest-override  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wno-deprecated  -fno-exceptions  -Wstrict-aliasing  CMakeFiles/cmTC_313f1.dir/pthread_affinity.cpp.o -o cmTC_313f1 
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "RUN_HAVE_PTHREAD_AFFINITY"
+      cached: true
+      stdout: |
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "CMakeLists.txt:444 (check_library_exists)"
+    checks:
+      - "Looking for sqlite3_open in sqlite3"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-8GogWQ"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-8GogWQ"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wstrict-prototypes"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_SQLITE3"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-8GogWQ'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7f142/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_7f142.dir/build.make CMakeFiles/cmTC_7f142.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-8GogWQ'
+        Building C object CMakeFiles/cmTC_7f142.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -Wstrict-prototypes -DCHECK_FUNCTION_EXISTS=sqlite3_open -std=c11 -o CMakeFiles/cmTC_7f142.dir/CheckFunctionExists.c.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-8GogWQ/CheckFunctionExists.c
+        Linking C executable cmTC_7f142
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7f142.dir/link.txt --verbose=1
+        /usr/bin/cc  -Wstrict-prototypes -DCHECK_FUNCTION_EXISTS=sqlite3_open CMakeFiles/cmTC_7f142.dir/CheckFunctionExists.c.o -o cmTC_7f142  -lsqlite3 
+        /usr/bin/ld: cannot find -lsqlite3: No such file or directory
+        collect2: error: ld returned 1 exit status
+        gmake[1]: *** [CMakeFiles/cmTC_7f142.dir/build.make:99: cmTC_7f142] Error 1
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-8GogWQ'
+        gmake: *** [Makefile:127: cmTC_7f142/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:455 (check_cxx_source_compiles)"
+    checks:
+      - "Performing Test HAVE_KYOTOCABINET"
+    directories:
+      source: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-Xx78MV"
+      binary: "/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-Xx78MV"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -fno-exceptions -fno-rtti"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_KYOTOCABINET"
+      cached: true
+      stdout: |
+        Change Dir: '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-Xx78MV'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_413d2/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_413d2.dir/build.make CMakeFiles/cmTC_413d2.dir/build
+        gmake[1]: Entering directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-Xx78MV'
+        Building CXX object CMakeFiles/cmTC_413d2.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_KYOTOCABINET  -fno-exceptions -fno-rtti  -o CMakeFiles/cmTC_413d2.dir/src.cxx.o -c /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-Xx78MV/src.cxx
+        /home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-Xx78MV/src.cxx:2:10: fatal error: kcpolydb.h: No such file or directory
+            2 | #include <kcpolydb.h>
+              |          ^~~~~~~~~~~~
+        compilation terminated.
+        gmake[1]: *** [CMakeFiles/cmTC_413d2.dir/build.make:78: CMakeFiles/cmTC_413d2.dir/src.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/shoubhit/COP290A3/leveldb/CMakeFiles/CMakeScratch/TryCompile-Xx78MV'
+        gmake: *** [Makefile:127: cmTC_413d2/fast] Error 2
+        
+      exitCode: 2
+...
