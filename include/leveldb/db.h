@@ -17,7 +17,7 @@
 #include <utility>
 #include <string>
 #include <memory>
-// MY CODE-----------------------------------------------------------------------------------------------
+// MY CODE---------------------------------------------------------------------------------------------
 
 namespace leveldb {
 
@@ -81,7 +81,7 @@ virtual Status Scan(const ReadOptions& options,
 // MY CODE-----------------------------------------------------------------------------------------------
 
 // MY CODE-----------------------------------------------------------------------------------------------
-  // Logically delete all key-value pairs whose keys fall within the half-open interval [start_key, end_key).
+  // Logically deletes all key-value pairs whose keys fall within the half-open interval [start_key, end_key).
   // The physical deletion is deferred until the background compaction process merges the SSTables.
   virtual Status DeleteRange(const WriteOptions& options,
                              const Slice& start_key,
@@ -90,7 +90,7 @@ virtual Status Scan(const ReadOptions& options,
 
 
 // MY CODE-----------------------------------------------------------------------------------------------
-  // Triggers a synchronous full database compaction.
+  // I Triggered synchronous full database compaction here.
   // Blocks the calling thread until all levels are fully compacted and writes stats.
   virtual Status ForceFullCompaction() = 0;
   // MY CODE-----------------------------------------------------------------------------------------------

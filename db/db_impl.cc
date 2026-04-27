@@ -1266,27 +1266,27 @@ Status DBImpl::DeleteRange(const WriteOptions& write_opts,
                            const Slice& start_boundary,
                            const Slice& end_boundary) {
   
-  // 1. Group all tombstone markers into a single atomic WriteBatch.
+  //  Group all tombstone markers into a single atomic WriteBatch.
   // This defers physical deletion to the background compaction phase, 
   // satisfying LevelDB's immutable SSTable design.
   WriteBatch deletion_batch;
 
-  // 2. Initialize a safe iterator to scan the current state of the database.
+  //  Initialize a safe iterator to scan the current state of the database.
   // Wrapped in a unique_ptr to prevent memory leaks.
   ReadOptions read_opts;
   std::unique_ptr<Iterator> lsm_iterator(this->NewIterator(read_opts));
 
-  // 3. Define the upper bound condition using the internal comparator.
+  //  Define the upper bound condition using the internal comparator.
   auto is_within_target_range = [&](const Slice& current_key) {
     const Comparator* cmp = internal_comparator_.user_comparator();
     // We break if the comparison is >= 0 (meaning we hit or passed the end boundary)
     return cmp->Compare(current_key, end_boundary) < 0; 
   };
 
-  // 4. Position the iterator at the start of our target interval
+  //  Position the iterator at the start of our target interval
   lsm_iterator->Seek(start_boundary);
 
-  // 5. Walk through the LSM-tree and inject deletion markers
+  //  Walk through the LSM-tree and inject deletion markers
   while (lsm_iterator->Valid()) {
     Slice current_key = lsm_iterator->key();
 
@@ -1303,12 +1303,12 @@ Status DBImpl::DeleteRange(const WriteOptions& write_opts,
     lsm_iterator->Next();
   }
 
-  // 6. Abort if the database encountered a read error during traversal
+  //  Abort if the database encountered a read error during traversal
   if (!lsm_iterator->status().ok()) {
     return lsm_iterator->status();
   }
 
-  // 7. Flush the batched tombstones atomically to the Write-Ahead Log and MemTable
+  //  Flush the batched tombstones atomically to the Write-Ahead Log and MemTable
   return this->Write(write_opts, &deletion_batch);
 }
 // MY CODE-----------------------------------------------------------------------------------------------
@@ -1318,11 +1318,10 @@ Status DBImpl::ForceFullCompaction() {
   
   // ---> THE FIX: FLUSH MEMTABLE BEFORE SETTING TRAPS <---
   // TEST_CompactMemTable calls Write() internally. It must execute before 
-  // we set is_running to true, otherwise it will hit our Write trap and deadlock!
+  // we set is_running to true, otherwise it will hit our Write trap and deadlock
   TEST_CompactMemTable();
 
-  // 1. Lock the database, initialize stats, and SNAPSHOT the active levels
-// 1. Lock the database and initialize stats
+//  Lock the database and initialize stats
   {
     MutexLock l(&mutex_);
     explicit_stats_.is_running = true;
@@ -1333,9 +1332,9 @@ Status DBImpl::ForceFullCompaction() {
     explicit_stats_.bytes_written = 0;
   }
 
-  // 2. Execute synchronous compaction across levels.
+  //  Execute synchronous compaction across levels.
   // Re-check the live file count at each iteration: this skips levels that
-  // have no meaningful work (Piazza requirement) while still pushing data
+  // have no meaningful work while still pushing data
   // downward as previous compactions deposit files into the next level.
   const int max_level = config::kNumLevels - 1;
   for (int current_level = 0; current_level < max_level; ++current_level) {
@@ -1349,7 +1348,7 @@ Status DBImpl::ForceFullCompaction() {
     }
   }
 
-  // 3. Retrieve stats, disable tracking, and WAKE UP blocked foreground threads
+  //  Retrieve stats, disable tracking, and WAKE UP blocked foreground threads
   ExplicitCompactionStats final_stats;
   {
     MutexLock l(&mutex_);
@@ -1360,7 +1359,7 @@ Status DBImpl::ForceFullCompaction() {
     background_work_finished_signal_.SignalAll(); 
   }
 
-  // 4. Print the human-readable statistics directly to the terminal
+  //  Print statistics directly to the terminal
   std::cout << "\n============================================\n";
   std::cout << "   EXPLICIT FULL COMPACTION STATISTICS\n";
   std::cout << "============================================\n";
