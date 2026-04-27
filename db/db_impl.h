@@ -108,12 +108,12 @@ class DBImpl : public DB {
   // Encapsulated state for tracking explicit compaction metrics.
   // Must only be modified while holding mutex_.
   struct ExplicitCompactionStats {
-    bool is_running;
-    int total_compactions;
-    int total_inputs;
-    int total_outputs;
-    uint64_t bytes_read;
-    uint64_t bytes_written;
+    bool is_running = false;
+    int total_compactions = 0;
+    int total_inputs = 0;
+    int total_outputs = 0;
+    uint64_t bytes_read = 0;
+    uint64_t bytes_written = 0;
   };
   
   ExplicitCompactionStats explicit_stats_;

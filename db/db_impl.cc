@@ -1322,7 +1322,7 @@ Status DBImpl::ForceFullCompaction() {
   TEST_CompactMemTable();
 
   // 1. Lock the database, initialize stats, and SNAPSHOT the active levels
-  bool active_levels[config::kNumLevels];
+// 1. Lock the database and initialize stats
   {
     MutexLock l(&mutex_);
     explicit_stats_.is_running = true;
@@ -1331,24 +1331,22 @@ Status DBImpl::ForceFullCompaction() {
     explicit_stats_.total_outputs = 0;
     explicit_stats_.bytes_read = 0;
     explicit_stats_.bytes_written = 0;
-
-    // Record which levels actually have files before we start.
-    for (int i = 0; i < config::kNumLevels; i++) {
-        active_levels[i] = (versions_->current()->NumFiles(i) > 0);
-    }
   }
 
-  // 2. Execute synchronous compaction ONLY on initially active levels
-  int current_level = 0;
+  // 2. Execute synchronous compaction across levels.
+  // Re-check the live file count at each iteration: this skips levels that
+  // have no meaningful work (Piazza requirement) while still pushing data
+  // downward as previous compactions deposit files into the next level.
   const int max_level = config::kNumLevels - 1;
-// ... [rest of the function remains exactly the same] ...
-  
-  while (current_level < max_level) {
-    // PIAZZA FIX: Only run compaction if this level had meaningful work to do!
-    if (active_levels[current_level]) {
-        TEST_CompactRange(current_level, nullptr, nullptr);
+  for (int current_level = 0; current_level < max_level; ++current_level) {
+    bool level_has_files;
+    {
+      MutexLock l(&mutex_);
+      level_has_files = (versions_->current()->NumFiles(current_level) > 0);
     }
-    current_level++;
+    if (level_has_files) {
+      TEST_CompactRange(current_level, nullptr, nullptr);
+    }
   }
 
   // 3. Retrieve stats, disable tracking, and WAKE UP blocked foreground threads
