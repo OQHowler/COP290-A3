@@ -88,6 +88,15 @@ virtual Status Scan(const ReadOptions& options,
                              const Slice& end_key) = 0;
   // MY CODE-----------------------------------------------------------------------------------------------
 
+
+// MY CODE-----------------------------------------------------------------------------------------------
+  // Triggers a synchronous full database compaction.
+  // Blocks the calling thread until all levels are fully compacted and writes stats.
+  virtual Status ForceFullCompaction() = 0;
+  // MY CODE-----------------------------------------------------------------------------------------------
+
+
+  
   // Set the database entry for "key" to "value".  Returns OK on success,
   // and a non-OK status on error.
   // Note: consider setting options.sync = true.

@@ -2143,6 +2143,14 @@ class ModelDB : public DB {
   }
   // MY CODE-----------------------------------------------------------------------------------------------
 
+
+  // MY CODE-----------------------------------------------------------------------------------------------
+  Status ForceFullCompaction() override {
+    return Status::NotSupported("ModelDB does not support ForceFullCompaction");
+  }
+  // MY CODE-----------------------------------------------------------------------------------------------
+  
+
   Iterator* NewIterator(const ReadOptions& options) override {
     if (options.snapshot == nullptr) {
       KVMap* saved = new KVMap;

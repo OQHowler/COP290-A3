@@ -43,13 +43,15 @@ class DBImpl : public DB {
                     std::vector<std::pair<std::string, std::string>>* result) override;
   // MY CODE-----------------------------------------------------------------------------------------------
   
-  // MY CODE-----------------------------------------------------------------------------------------------
+    // MY CODE-----------------------------------------------------------------------------------------------
   Status DeleteRange(const WriteOptions& options,
-                     const Slice& start_key,
-                     const Slice& end_key) override;
+                   const Slice& start_key,
+                   const Slice& end_key) override;
   // MY CODE-----------------------------------------------------------------------------------------------
-  
 
+// MY CODE-----------------------------------------------------------------------------------------------
+  Status ForceFullCompaction() override;
+  // MY CODE-----------------------------------------------------------------------------------------------
 
   // Implementations of the DB interface
   Status Put(const WriteOptions&, const Slice& key,
@@ -100,6 +102,21 @@ class DBImpl : public DB {
 
   // Custom helper function to check if a key falls within any deferred drop ranges.
   bool ShouldDropKeyDuringCompaction(const Slice& user_key);
+  // MY CODE-----------------------------------------------------------------------------------------------
+
+  // MY CODE-----------------------------------------------------------------------------------------------
+  // Encapsulated state for tracking explicit compaction metrics.
+  // Must only be modified while holding mutex_.
+  struct ExplicitCompactionStats {
+    bool is_running;
+    int total_compactions;
+    int total_inputs;
+    int total_outputs;
+    uint64_t bytes_read;
+    uint64_t bytes_written;
+  };
+  
+  ExplicitCompactionStats explicit_stats_;
   // MY CODE-----------------------------------------------------------------------------------------------
 
   // Information for a manual compaction

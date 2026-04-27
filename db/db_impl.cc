@@ -11,6 +11,8 @@
 #include <set>
 #include <string>
 #include <vector>
+#include <fstream>
+#include <iostream>
 
 #include "db/builder.h"
 #include "db/db_iter.h"
@@ -941,22 +943,7 @@ Status DBImpl::DoCompactionWork(CompactionState* compact) {
 
     Slice key = input->key(); 
 
-    // MY CODE-----------------------------------------------------------------------------------------------
-    // COP290 RANGE DELETE INTERCEPTION
-    // Extract the raw user key from the internal LevelDB key structure
-    ParsedInternalKey parsed_key;
-    if (ParseInternalKey(key, &parsed_key)) {
-      
-      // Pass the raw user key to our bespoke active range filter
-      if (ShouldDropKeyDuringCompaction(parsed_key.user_key)) {
-        
-        // The key falls inside a deletion interval.
-        // We skip processing it, effectively destroying it permanently.
-        input->Next();
-        continue; 
-      }
-    }
-    // MY CODE-----------------------------------------------------------------------------------------------
+
     if (compact->compaction->ShouldStopBefore(key) &&
         compact->builder != nullptr) {
       status = FinishCompactionOutputFile(compact, input);
@@ -1063,6 +1050,24 @@ Status DBImpl::DoCompactionWork(CompactionState* compact) {
   mutex_.Lock();
   stats_[compact->compaction->level() + 1].Add(stats);
 
+    // MY CODE-----------------------------------------------------------------------------------------------
+    // Inject custom metric collection if an explicit compaction is underway
+    if (explicit_stats_.is_running) {
+      explicit_stats_.total_compactions += 1;
+      
+      // Calculate inputs by summing across both relevant level indices directly
+      int inputs_lvl_n = compact->compaction->num_input_files(0);
+      int inputs_lvl_n_plus_1 = compact->compaction->num_input_files(1);
+      explicit_stats_.total_inputs += (inputs_lvl_n + inputs_lvl_n_plus_1);
+      
+      explicit_stats_.total_outputs += compact->outputs.size();
+      explicit_stats_.bytes_read += stats.bytes_read;
+      explicit_stats_.bytes_written += stats.bytes_written;
+    }
+    // MY CODE-----------------------------------------------------------------------------------------------
+
+
+
   if (status.ok()) {
     status = InstallCompactionResults(compact);
   }
@@ -1139,7 +1144,13 @@ int64_t DBImpl::TEST_MaxNextLevelOverlappingBytes() {
 Status DBImpl::Get(const ReadOptions& options, const Slice& key,
                    std::string* value) {
   Status s;
-  MutexLock l(&mutex_);
+MutexLock l(&mutex_);
+  
+  // MY CODE: PIAZZA BLOCKING REQUIREMENT
+  while (explicit_stats_.is_running) {
+      background_work_finished_signal_.Wait();
+  }
+  // MY CODE
   SequenceNumber snapshot;
   if (options.snapshot != nullptr) {
     snapshot =
@@ -1251,56 +1262,143 @@ Status DBImpl::Scan(const ReadOptions& options,
 
 
 // MY CODE-----------------------------------------------------------------------------------------------
-// Helper function: Evaluates if a given key falls within any registered deletion intervals.
-bool DBImpl::ShouldDropKeyDuringCompaction(const Slice& user_key) {
-  const Comparator* user_cmp = internal_comparator_.user_comparator();
+Status DBImpl::DeleteRange(const WriteOptions& write_opts,
+                           const Slice& start_boundary,
+                           const Slice& end_boundary) {
+  
+  // 1. Group all tombstone markers into a single atomic WriteBatch.
+  // This defers physical deletion to the background compaction phase, 
+  // satisfying LevelDB's immutable SSTable design.
+  WriteBatch deletion_batch;
 
-  // Iterate through all active deletion intervals
-  for (size_t i = 0; i < compaction_drop_ranges_.size(); ++i) {
-    const auto& interval = compaction_drop_ranges_[i];
-    
-    // interval.first is the start_key, interval.second is the end_key
-    int start_cmp = user_cmp->Compare(user_key, interval.first);
-    int end_cmp = user_cmp->Compare(user_key, interval.second);
+  // 2. Initialize a safe iterator to scan the current state of the database.
+  // Wrapped in a unique_ptr to prevent memory leaks.
+  ReadOptions read_opts;
+  std::unique_ptr<Iterator> lsm_iterator(this->NewIterator(read_opts));
 
-    // If it strictly satisfies [start, end), the key should be discarded
-    if (start_cmp >= 0 && end_cmp < 0) {
-      return true; 
+  // 3. Define the upper bound condition using the internal comparator.
+  auto is_within_target_range = [&](const Slice& current_key) {
+    const Comparator* cmp = internal_comparator_.user_comparator();
+    // We break if the comparison is >= 0 (meaning we hit or passed the end boundary)
+    return cmp->Compare(current_key, end_boundary) < 0; 
+  };
+
+  // 4. Position the iterator at the start of our target interval
+  lsm_iterator->Seek(start_boundary);
+
+  // 5. Walk through the LSM-tree and inject deletion markers
+  while (lsm_iterator->Valid()) {
+    Slice current_key = lsm_iterator->key();
+
+    // Stop traversing if we cross the strictly-less-than boundary [start, end)
+    if (!is_within_target_range(current_key)) {
+        break; 
+    }
+
+    // Natively append a tombstone marker for this specific key.
+    // The existing compaction engine will naturally obliterate this key later.
+    deletion_batch.Delete(current_key);
+
+    // Advance to the next entry
+    lsm_iterator->Next();
+  }
+
+  // 6. Abort if the database encountered a read error during traversal
+  if (!lsm_iterator->status().ok()) {
+    return lsm_iterator->status();
+  }
+
+  // 7. Flush the batched tombstones atomically to the Write-Ahead Log and MemTable
+  return this->Write(write_opts, &deletion_batch);
+}
+// MY CODE-----------------------------------------------------------------------------------------------
+
+// MY CODE-----------------------------------------------------------------------------------------------
+Status DBImpl::ForceFullCompaction() {
+  
+  // ---> THE FIX: FLUSH MEMTABLE BEFORE SETTING TRAPS <---
+  // TEST_CompactMemTable calls Write() internally. It must execute before 
+  // we set is_running to true, otherwise it will hit our Write trap and deadlock!
+  TEST_CompactMemTable();
+
+  // 1. Lock the database, initialize stats, and SNAPSHOT the active levels
+  bool active_levels[config::kNumLevels];
+  {
+    MutexLock l(&mutex_);
+    explicit_stats_.is_running = true;
+    explicit_stats_.total_compactions = 0;
+    explicit_stats_.total_inputs = 0;
+    explicit_stats_.total_outputs = 0;
+    explicit_stats_.bytes_read = 0;
+    explicit_stats_.bytes_written = 0;
+
+    // Record which levels actually have files before we start.
+    for (int i = 0; i < config::kNumLevels; i++) {
+        active_levels[i] = (versions_->current()->NumFiles(i) > 0);
     }
   }
-  return false; 
-}
 
-// Main API: Records the deletion range
-Status DBImpl::DeleteRange(const WriteOptions& options,
-                           const Slice& start_key,
-                           const Slice& end_key) {
+  // 2. Execute synchronous compaction ONLY on initially active levels
+  int current_level = 0;
+  const int max_level = config::kNumLevels - 1;
+// ... [rest of the function remains exactly the same] ...
   
-  // Safely inject the interval into the database state
-  {
-    // Acquire the main database lock to prevent race conditions 
-    // with the background compaction thread.
-    MutexLock l(&mutex_);
-    
-    // Push the string versions of the keys into our pair vector
-    compaction_drop_ranges_.push_back({start_key.ToString(), end_key.ToString()});
+  while (current_level < max_level) {
+    // PIAZZA FIX: Only run compaction if this level had meaningful work to do!
+    if (active_levels[current_level]) {
+        TEST_CompactRange(current_level, nullptr, nullptr);
+    }
+    current_level++;
   }
 
-  // Return success immediately. The actual physical deletion 
-  // happens during the DoCompactionWork cycle.
+  // 3. Retrieve stats, disable tracking, and WAKE UP blocked foreground threads
+  ExplicitCompactionStats final_stats;
+  {
+    MutexLock l(&mutex_);
+    explicit_stats_.is_running = false;
+    final_stats = explicit_stats_; 
+    
+    // PIAZZA FIX: Unblock all Put/Get requests that were stalled during compaction
+    background_work_finished_signal_.SignalAll(); 
+  }
+
+  // 4. Print the human-readable statistics directly to the terminal
+  std::cout << "\n============================================\n";
+  std::cout << "   EXPLICIT FULL COMPACTION STATISTICS\n";
+  std::cout << "============================================\n";
+  std::cout << "-> Compaction Cycles Executed : " << final_stats.total_compactions << "\n";
+  std::cout << "-> SSTable Inputs Processed   : " << final_stats.total_inputs << "\n";
+  std::cout << "-> SSTable Outputs Generated  : " << final_stats.total_outputs << "\n";
+  std::cout << "-> Total Data Read (Bytes)    : " << final_stats.bytes_read << "\n";
+  std::cout << "-> Total Data Written (Bytes) : " << final_stats.bytes_written << "\n";
+  std::cout << "============================================\n" << std::endl;
+
   return Status::OK();
 }
 // MY CODE-----------------------------------------------------------------------------------------------
 
+
+
 Iterator* DBImpl::NewIterator(const ReadOptions& options) {
+  
+  // MY CODE: PIAZZA BLOCKING REQUIREMENT
+  // We use a scoped lock so we don't hold the mutex when calling NewInternalIterator 
+  // (which would cause a fatal deadlock because it acquires the mutex itself).
+  {
+    MutexLock l(&mutex_);
+    while (explicit_stats_.is_running) {
+        background_work_finished_signal_.Wait();
+    }
+  }
+  // MY CODE
+
   SequenceNumber latest_snapshot;
   uint32_t seed;
   Iterator* iter = NewInternalIterator(options, &latest_snapshot, &seed);
   return NewDBIterator(this, user_comparator(), iter,
                        (options.snapshot != nullptr
-                            ? static_cast<const SnapshotImpl*>(options.snapshot)
-                                  ->sequence_number()
-                            : latest_snapshot),
+                        ? static_cast<const SnapshotImpl*>(options.snapshot)->sequence_number()
+                        : latest_snapshot),
                        seed);
 }
 
@@ -1336,7 +1434,13 @@ Status DBImpl::Write(const WriteOptions& options, WriteBatch* updates) {
   w.sync = options.sync;
   w.done = false;
 
-  MutexLock l(&mutex_);
+MutexLock l(&mutex_);
+  
+  // MY CODE: PIAZZA BLOCKING REQUIREMENT
+  while (explicit_stats_.is_running) {
+      background_work_finished_signal_.Wait();
+  }
+  // MY CODE
   writers_.push_back(&w);
   while (!w.done && &w != writers_.front()) {
     w.cv.Wait();
