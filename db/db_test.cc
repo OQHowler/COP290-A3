@@ -2134,7 +2134,15 @@ class ModelDB : public DB {
     return Status::NotSupported("Scan is not implemented in ModelDB");
   }
   // MY CODE-----------------------------------------------------------------------------------------------
-  
+
+// MY CODE-----------------------------------------------------------------------------------------------
+  Status DeleteRange(const WriteOptions& options,
+                     const Slice& start_key,
+                     const Slice& end_key) override {
+    return Status::NotSupported("DeleteRange not implemented in ModelDB");
+  }
+  // MY CODE-----------------------------------------------------------------------------------------------
+
   Iterator* NewIterator(const ReadOptions& options) override {
     if (options.snapshot == nullptr) {
       KVMap* saved = new KVMap;

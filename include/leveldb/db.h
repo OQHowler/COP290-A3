@@ -68,7 +68,7 @@ class LEVELDB_EXPORT DB {
   virtual ~DB();
 
 // MY CODE-----------------------------------------------------------------------------------------------
-// Return all key-value pairs whose keys fall within the half-open interval [start_key, end_key).
+// Return all key-value pairs whose keys are within the interval [start_key, end_key).
 // EXPLANATION OF CODE
 // This is written as virtual to make it a abstract class, any subclass must implement scan, using runtime polymorphism
 // Status is a return type which could return OK, NOTFOUND, etc
@@ -79,6 +79,14 @@ virtual Status Scan(const ReadOptions& options,
                     const Slice& end_key,
                     std::vector<std::pair<std::string, std::string>>* result) = 0;
 // MY CODE-----------------------------------------------------------------------------------------------
+
+// MY CODE-----------------------------------------------------------------------------------------------
+  // Logically delete all key-value pairs whose keys fall within the half-open interval [start_key, end_key).
+  // The physical deletion is deferred until the background compaction process merges the SSTables.
+  virtual Status DeleteRange(const WriteOptions& options,
+                             const Slice& start_key,
+                             const Slice& end_key) = 0;
+  // MY CODE-----------------------------------------------------------------------------------------------
 
   // Set the database entry for "key" to "value".  Returns OK on success,
   // and a non-OK status on error.

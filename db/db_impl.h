@@ -42,6 +42,15 @@ class DBImpl : public DB {
                     const Slice& end_key,
                     std::vector<std::pair<std::string, std::string>>* result) override;
   // MY CODE-----------------------------------------------------------------------------------------------
+  
+  // MY CODE-----------------------------------------------------------------------------------------------
+  Status DeleteRange(const WriteOptions& options,
+                     const Slice& start_key,
+                     const Slice& end_key) override;
+  // MY CODE-----------------------------------------------------------------------------------------------
+  
+
+
   // Implementations of the DB interface
   Status Put(const WriteOptions&, const Slice& key,
              const Slice& value) override;
@@ -82,6 +91,16 @@ class DBImpl : public DB {
   friend class DB;
   struct CompactionState;
   struct Writer;
+
+// MY CODE-----------------------------------------------------------------------------------------------
+  // DEFERRED RANGE DELETION STATE
+  // Stores [start_key, end_key) boundaries for logical deletions.
+  // CRITICAL: mutex_ must be held when accessing or modifying this vector!
+  std::vector<std::pair<std::string, std::string>> compaction_drop_ranges_;
+
+  // Custom helper function to check if a key falls within any deferred drop ranges.
+  bool ShouldDropKeyDuringCompaction(const Slice& user_key);
+  // MY CODE-----------------------------------------------------------------------------------------------
 
   // Information for a manual compaction
   struct ManualCompaction {

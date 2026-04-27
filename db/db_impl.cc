@@ -22,6 +22,7 @@
 #include "db/table_cache.h"
 #include "db/version_set.h"
 #include "db/write_batch_internal.h"
+#include "leveldb/write_batch.h"
 #include "leveldb/db.h"
 #include "leveldb/env.h"
 #include "leveldb/status.h"
@@ -938,7 +939,24 @@ Status DBImpl::DoCompactionWork(CompactionState* compact) {
       imm_micros += (env_->NowMicros() - imm_start);
     }
 
-    Slice key = input->key();
+    Slice key = input->key(); 
+
+    // MY CODE-----------------------------------------------------------------------------------------------
+    // COP290 RANGE DELETE INTERCEPTION
+    // Extract the raw user key from the internal LevelDB key structure
+    ParsedInternalKey parsed_key;
+    if (ParseInternalKey(key, &parsed_key)) {
+      
+      // Pass the raw user key to our bespoke active range filter
+      if (ShouldDropKeyDuringCompaction(parsed_key.user_key)) {
+        
+        // The key falls inside a deletion interval.
+        // We skip processing it, effectively destroying it permanently.
+        input->Next();
+        continue; 
+      }
+    }
+    // MY CODE-----------------------------------------------------------------------------------------------
     if (compact->compaction->ShouldStopBefore(key) &&
         compact->builder != nullptr) {
       status = FinishCompactionOutputFile(compact, input);
@@ -1232,7 +1250,47 @@ Status DBImpl::Scan(const ReadOptions& options,
 // MY CODE-----------------------------------------------------------------------------------------------
 
 
+// MY CODE-----------------------------------------------------------------------------------------------
+// Helper function: Evaluates if a given key falls within any registered deletion intervals.
+bool DBImpl::ShouldDropKeyDuringCompaction(const Slice& user_key) {
+  const Comparator* user_cmp = internal_comparator_.user_comparator();
 
+  // Iterate through all active deletion intervals
+  for (size_t i = 0; i < compaction_drop_ranges_.size(); ++i) {
+    const auto& interval = compaction_drop_ranges_[i];
+    
+    // interval.first is the start_key, interval.second is the end_key
+    int start_cmp = user_cmp->Compare(user_key, interval.first);
+    int end_cmp = user_cmp->Compare(user_key, interval.second);
+
+    // If it strictly satisfies [start, end), the key should be discarded
+    if (start_cmp >= 0 && end_cmp < 0) {
+      return true; 
+    }
+  }
+  return false; 
+}
+
+// Main API: Records the deletion range
+Status DBImpl::DeleteRange(const WriteOptions& options,
+                           const Slice& start_key,
+                           const Slice& end_key) {
+  
+  // Safely inject the interval into the database state
+  {
+    // Acquire the main database lock to prevent race conditions 
+    // with the background compaction thread.
+    MutexLock l(&mutex_);
+    
+    // Push the string versions of the keys into our pair vector
+    compaction_drop_ranges_.push_back({start_key.ToString(), end_key.ToString()});
+  }
+
+  // Return success immediately. The actual physical deletion 
+  // happens during the DoCompactionWork cycle.
+  return Status::OK();
+}
+// MY CODE-----------------------------------------------------------------------------------------------
 
 Iterator* DBImpl::NewIterator(const ReadOptions& options) {
   SequenceNumber latest_snapshot;
